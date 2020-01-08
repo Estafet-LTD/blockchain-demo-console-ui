@@ -1,4 +1,4 @@
-package com.estafet.blockchain.demo.console.model;
+package com.estafet.blockchain.demo.console.ui.model;
 
 public class API {
 

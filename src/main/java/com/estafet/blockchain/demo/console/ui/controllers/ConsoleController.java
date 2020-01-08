@@ -1,4 +1,4 @@
-package com.estafet.blockchain.demo.console.controllers;
+package com.estafet.blockchain.demo.console.ui.controllers;
 
 import org.springframework.stereotype.Controller;
 
