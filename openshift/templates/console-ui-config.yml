@@ -9,7 +9,7 @@ parameters:
   required: true
 - description: Defines name of the microservice
   name: MICROSERVICE
-  value: basic-ui
+  value: console-ui
   required: true
 - description: Defines max memory
   name: MAX_MEMORY
