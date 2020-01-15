@@ -14,7 +14,7 @@ public class RateController {
 	ExchangeRateService exchangeRateService;
 	
 	@RequestMapping("/rates")
-	public String projects(Model model) {
+	public String rates(Model model) {
 		model.addAttribute("rates", exchangeRateService.getExchangeRates());
 		return "rates";
 	}

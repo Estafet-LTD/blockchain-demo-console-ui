@@ -15,13 +15,13 @@ public class AccountController {
 	private AccountService accountService;
 	
 	@RequestMapping("/accounts")
-	public String projects(Model model) {
+	public String accounts(Model model) {
 		model.addAttribute("accounts", accountService.getAccounts());
 		return "accounts";
 	}
 	
 	@RequestMapping("/account/{id}")
-	public String project(@PathVariable int id, Model model) {
+	public String account(@PathVariable int id, Model model) {
 		model.addAttribute("account", accountService.getAccount(id));
 		model.addAttribute("accountId", id);
 		return "account";
