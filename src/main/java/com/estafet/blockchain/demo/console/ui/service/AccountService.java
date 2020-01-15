@@ -20,4 +20,8 @@ public class AccountService {
 				Account.class);
 	}
 
+	public Account getAccount(int id) {
+		return restTemplate.getForObject(System.getenv("BANK_MS_SERVICE_URI") + "/account/{id}", Account.class, id);
+	}
+
 }

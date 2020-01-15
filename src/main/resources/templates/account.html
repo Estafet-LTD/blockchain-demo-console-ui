@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<body>
+	<div layout:fragment="content">
+		<div class="row">
+			<div class="col-md-8">
+				<h2>
+					Account&nbsp;<small th:text="${account.accountName}"></small>
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-8"></div>
+		</div>
+		<div class="row">
+			<ul>
+				<li th:each="transaction : ${account.transactions}"><span
+						th:text="${transaction.amount}"></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
