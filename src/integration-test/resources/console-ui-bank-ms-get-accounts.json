@@ -1,0 +1,13 @@
+{
+	"request": {
+		"method": "GET",
+		"url": "/console-ui/bank-ms/accounts"
+	},
+	"response": {
+		"status": 200,
+		"body": "[{\"id\": 1, \"walletAddress\": \"fjfjfdjdjd\", \"accountName\": \"Dennis\", \"currency\": \"USD\", \"balance\": 500, \"pendingBalance\": 0, \"pending\": false, \"transactions\":[{ \"id\": 1, \"walletTransactionId\": \"wweewww\", \"amount\": 50, \"status\": \"CLEARED\", \"cleared\": true, \"pending\": false }, { \"id\": 2, \"walletTransactionId\": \"lklkhjhjhj\", \"amount\": 450, \"status\": \"CLEARED\", \"cleared\": true, \"pending\": false }]},{\"id\": 2, \"walletAddress\": \"ghgjgggjg\", \"accountName\": \"Shukri\", \"currency\": \"GBP\", \"balance\": 500, \"pendingBalance\": 0, \"pending\": false, \"transactions\":[{ \"id\": 3, \"walletTransactionId\": \"wweewww\", \"amount\": 50, \"status\": \"CLEARED\", \"cleared\": true, \"pending\": false }, { \"id\": 4, \"walletTransactionId\": \"lklkhjhjhj\", \"amount\": 450, \"status\": \"CLEARED\", \"cleared\": true, \"pending\": false }]}]",
+		"headers": {
+            "Content-Type": "application/json"
+        }
+	}
+}

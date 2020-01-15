@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.estafet.blockchain.demo.console.ui.service.ExchangeRateService;
 
 @Controller
-public class RatesController {
+public class RateController {
 
 	@Autowired
 	ExchangeRateService exchangeRateService;
