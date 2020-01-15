@@ -16,7 +16,7 @@ public class AccountService {
 	private RestTemplate restTemplate;
 	
 	public List<Account> getAccounts() {
-		return RestHelper.getRestQuery(restTemplate, System.getenv("CURRENCY_CONVERTER_MS_SERVICE_URI") + "/exchange-rates",
+		return RestHelper.getRestQuery(restTemplate, System.getenv("BANK_MS_SERVICE_URI") + "/accounts",
 				Account.class);
 	}
 
