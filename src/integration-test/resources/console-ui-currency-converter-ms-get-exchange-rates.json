@@ -1,0 +1,13 @@
+{
+	"request": {
+		"method": "GET",
+		"url": "/console-ui/currency-converter-ms/exchange-rates"
+	},
+	"response": {
+		"status": 200,
+		"body": "[{\"currency\": \"USD\", \"rate\": 250 },{\"currency\": \"GBP\", \"rate\": 100 }, {\"currency\": \"BGD\", \"rate\": 600 }, {\"currency\": \"AUD\", \"rate\": 324 }, {\"currency\": \"EUR\", \"rate\": 800 }]",
+		"headers": {
+            "Content-Type": "application/json"
+        }
+	}
+}

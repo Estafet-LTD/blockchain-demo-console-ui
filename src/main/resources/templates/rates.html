@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<body>
+	<div layout:fragment="content">
+		<div class="row">
+			<div class="col-md-8">
+				<h2>
+					Exchange Rates&nbsp;&nbsp;<small><a th:href="@{/newrate}">new</a></small>
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-8"></div>
+		</div>
+		<div class="row">
+			<ul>
+				<li th:each="rate : ${rates}"><a
+					th:href="@{'/rate/' + ${rate.currency}}"> <span
+						th:text="${rate.currency}"></span>
+				</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

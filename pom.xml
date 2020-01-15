@@ -15,6 +15,14 @@
 		<microservice>console-ui</microservice>
 	</properties>
 
+	<dependencies>
+		<dependency>
+			<groupId>com.estafet.microservices.scrum</groupId>
+			<artifactId>microservices-scrum-commons-lib</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+	</dependencies>
+	
 	<scm>
 		<connection>scm:git:https://github.com/Estafet-LTD/estafet-blockchain-demo-console-ui.git</connection>
 		<developerConnection>scm:git:https://github.com/Estafet-LTD/estafet-blockchain-demo-console-ui.git</developerConnection>
