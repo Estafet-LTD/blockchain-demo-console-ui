@@ -16,14 +16,14 @@
 			</h3>	
 		</div>	
 		<div align="right">
-			dkddkdkdk
+			<a href="#" class="btn btn-primary btn-lg" role="button">Open New Account</a>
 		</div>				
 		<div th:each="account : ${accounts}" class="card" style="width: 18rem;">
 		  <div class="card-body">
 		    <h5 class="card-title" th:text="${account.accountName}"/>
 		    <h6 class="card-subtitle mb-2 text-muted" th:text="${account.balance}"/>
-		    <p class="card-text"><b>Last transaction</b><span th:text="${account.transactions[0].description}"/></p>
-		    <a href="@{'/account/' + ${account.id}}" class="card-link">Details</a>
+		    <p class="card-text"><b>Last transaction</b>&nbsp;<span th:text="${account.transactions[0].description}"/>...</p>
+		    <a th:href="@{'/account/' + ${account.id}}" class="card-link">Details</a>
 		  </div>
 		</div>		
 	</div>
