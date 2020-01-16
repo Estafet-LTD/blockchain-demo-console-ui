@@ -18,11 +18,11 @@
 		<div align="right">
 			dkddkdkdk
 		</div>				
-		<div th:each="account : ${accounts} class="card" style="width: 18rem;">
+		<div th:each="account : ${accounts}" class="card" style="width: 18rem;">
 		  <div class="card-body">
 		    <h5 class="card-title" th:text="${account.accountName}"/>
 		    <h6 class="card-subtitle mb-2 text-muted" th:text="${account.balance}"/>
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    <p class="card-text"><b>Last transaction</b><span th:text="${account.transactions[0].description"/></p>
 		    <a href="@{'/account/' + ${account.id}}" class="card-link">Details</a>
 		  </div>
 		</div>		
