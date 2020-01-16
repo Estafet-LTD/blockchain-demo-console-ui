@@ -10,6 +10,8 @@ public class Transaction {
 
 	private String status;
 
+	private String description;
+
 	private boolean cleared;
 
 	private boolean pending;
@@ -60,6 +62,14 @@ public class Transaction {
 
 	public void setPending(boolean pending) {
 		this.pending = pending;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

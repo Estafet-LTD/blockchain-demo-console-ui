@@ -11,26 +11,28 @@
 		    <li class="breadcrumb-item active" aria-current="page">Account</li>
 		  </ol>
 		</nav>	
-		<div class="row">
-			<div class="col-md-8">
-				<h2>
-					Account&nbsp;<small th:text="${account.accountName}"></small>
-				</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8"></div>
-		</div>
-		<div class="row">
-			<div class="col-md-8"></div>
-		</div>
-		<div class="row">
-			<ul>
-				<li th:each="transaction : ${account.transactions}"><span
-						th:text="${transaction.amount}"></span>
-				</li>
-			</ul>
-		</div>
+		<h3>
+		  Account
+		  <small class="text-muted" th:text="${account.accountName}"></small>
+		</h3>		
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Transaction</th>
+		      <th scope="col">Amount</th>
+		      <th scope="col">Status</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr th:each="transaction : ${account.transactions}">
+		      <th scope="row" th:text="${transaction.id}"/>
+		      <td th:text="${transaction.description}"/>
+		      <td th:text="${transaction.amount}"/>
+		      <td th:text="${transaction.status}"/>
+		    </tr>
+		  </tbody>
+		</table>		
 	</div>
 </body>
 </html>

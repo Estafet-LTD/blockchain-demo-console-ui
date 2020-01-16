@@ -4,6 +4,13 @@
 	layout:decorator="default">
 <body>
 	<div layout:fragment="content">
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="/">Home</a></li>
+		    <li class="breadcrumb-item"><a href="/rates">Rates</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">Rate</li>
+		  </ol>
+		</nav>		
 		<h2>Rate</h2>
 		<div>
 			<form action="#" th:action="@{'/rate/'} + ${currency} " th:object="${task}" method="post">

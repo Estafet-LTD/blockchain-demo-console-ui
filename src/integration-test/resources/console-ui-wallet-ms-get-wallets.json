@@ -1,0 +1,13 @@
+{
+	"request": {
+		"method": "GET",
+		"url": "/console-ui/wallet-ms/wallets"
+	},
+	"response": {
+		"status": 200,
+		"body": "[{\"walletAddress\": \"kjkjjljljljljl\", \"walletName\": \"Dennis\", \"balance\": 240 },{\"walletAddress\": \"ddkdkslsls\", \"walletName\": \"Shukri\", \"balance\": 4438 }]",
+		"headers": {
+            "Content-Type": "application/json"
+        }
+	}
+}

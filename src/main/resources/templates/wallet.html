@@ -4,17 +4,25 @@
 	layout:decorator="default">
 <body>
 	<div layout:fragment="content">
-		<h2>Wallet</h2>
-		<div>
-			<form action="#" th:action="@{'/rate/'} + ${currency} " th:object="${task}" method="post">
-				<div>
-					<label>Currency:</label> <input type="text" th:field="*{currency}"/>
-					<label>Rate:</label> <input type="text" th:field="*{rate}"/>
-				</div>
-				<div>
-					<input type="submit" value="Submit" />
-				</div>
-			</form>
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="/">Home</a></li>
+		    <li class="breadcrumb-item"><a href="/wallets">Wallets</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">Wallet</li>
+		  </ol>
+		</nav>	
+		<div class="row">
+			<div class="col-md-8">
+				<h2>
+					Wallet&nbsp;<small th:text="${wallet.walletName}"></small>
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-8"></div>
 		</div>
 	</div>
 </body>

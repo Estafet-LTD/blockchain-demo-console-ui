@@ -27,7 +27,7 @@
 			<ul>
 				<li th:each="wallet : ${wallets}"><a
 					th:href="@{'/wallet/' + ${wallet.walletAddress}}"> <span
-						th:text="${wallet.walletAddress}"></span>
+						th:text="${wallet.walletName}"></span>
 				</a></li>
 			</ul>
 		</div>
