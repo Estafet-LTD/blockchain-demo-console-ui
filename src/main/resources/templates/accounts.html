@@ -10,24 +10,22 @@
 		    <li class="breadcrumb-item active" aria-current="page">Accounts</li>
 		  </ol>
 		</nav>
-		<div class="row">
-			<div class="col-md-8">
-				<h2>
-					Accounts&nbsp;&nbsp;<small><a th:href="@{/new-account}">new</a></small>
-				</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8"></div>
-		</div>
-		<div class="row">
-			<div class="col-md-8"></div>
-		</div>
-		<div class="row">
-			<ul>
-				<li th:each="account : ${accounts}"><a th:href="@{'/account/' + ${account.id}}"> <span th:text="${account.accountName}"></span>	</a></li>
-			</ul>
-		</div>
+		<div align="left">
+			<h3>
+			  Accounts
+			</h3>	
+		</div>	
+		<div align="right">
+			dkddkdkdk
+		</div>				
+		<div th:each="account : ${accounts} class="card" style="width: 18rem;">
+		  <div class="card-body">
+		    <h5 class="card-title" th:text="${account.accountName}"/>
+		    <h6 class="card-subtitle mb-2 text-muted" th:text="${account.balance}"/>
+		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    <a href="@{'/account/' + ${account.id}}" class="card-link">Details</a>
+		  </div>
+		</div>		
 	</div>
 </body>
 </html>

@@ -11,10 +11,23 @@
 		    <li class="breadcrumb-item active" aria-current="page">Account</li>
 		  </ol>
 		</nav>	
-		<h3>
-		  Account
-		  <small class="text-muted" th:text="${account.accountName}"></small>
-		</h3>		
+		<div align="left">
+			<h3>
+			  Account
+			  <small class="text-muted" th:text="${account.accountName}"></small>
+			</h3>	
+			<h3>
+			  Balance
+			  <small class="text-muted" th:text="${account.balance}"></small>
+			</h3>		
+			<h3>
+			  Pending Balance
+			  <small class="text-muted" th:text="${account.pendingBalance}"></small>
+			</h3>
+		</div>	
+		<div align="right">
+			dkddkdkdk
+		</div>		
 		<table class="table table-striped">
 		  <thead>
 		    <tr>
