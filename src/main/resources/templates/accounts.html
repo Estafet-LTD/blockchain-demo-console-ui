@@ -18,7 +18,7 @@
 		<div align="right">
 			<a href="#" class="btn btn-primary btn-lg" role="button">Open New Account</a>
 		</div>				
-		<div th:each="account : ${accounts}" class="card" style="width: 18rem;">
+		<div th:each="account : ${accounts}" class="card mb-3" style="width: 40rem;">
 		  <div class="card-body">
 		    <h5 class="card-title" th:text="${account.accountName}"/>
 		    <h6 class="card-subtitle mb-2 text-muted" th:text="${account.balance}"/>
