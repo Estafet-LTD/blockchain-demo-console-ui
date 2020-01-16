@@ -17,12 +17,12 @@
 		<form action="#" th:action="@{/newaccount}" th:object="${account}" method="post">
 		  <div class="row">
 		    <div class="col">
-		      <input type="text" class="form-control" placeholder="Account Name" th:field="*{accountName}">
+		      <input type="text" class="form-control" placeholder="Account Name" th:field="*{accountName}"/>
 		    </div>
 		  </div>
 		  <div class="row">
 			  <div class="col">
-			      <input type="text" class="form-control" placeholder="Opening Deposit" th:field="*{openingDeposit}">
+			      <input type="text" class="form-control" placeholder="Opening Deposit" th:field="*{openingDeposit}"/>
 			  </div>
 			  <div class="col">
 			  	<select class="form-control" th:field="*{currency}">
