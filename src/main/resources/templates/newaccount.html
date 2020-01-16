@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<body>
+	<div layout:fragment="content">
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="/">Home</a></li>
+		    <li class="breadcrumb-item"><a href="/accounts">Accounts</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">New Account</li>
+		  </ol>
+		</nav>		
+		<h3>
+		  New Account
+		</h3>	
+		<form action="#" th:action="@{/newaccount}" th:object="${account}" method="post">
+		  <div class="row">
+		    <div class="col">
+		      <input type="text" class="form-control" placeholder="Account Name" th:field="*{accountName}">
+		    </div>
+		  </div>
+		  <div class="row">
+			  <div class="col">
+			      <input type="text" class="form-control" placeholder="Opening Deposit" th:field="*{openingDeposit}">
+			  </div>
+			  <div class="col">
+			  	<select class="form-control" th:field="*{currency}">
+					<option th:value="'USD'" th:text="USB"></option>
+    				<option th:value="'GBP'" th:text="GBP"></option>
+    				<option th:value="'BGD'" th:text="BGD"></option>
+    				<option th:value="'EUR'" th:text="EUR"></option>
+				</select>
+			  </div>
+		  </div>
+		  <div class="row">
+		  	<button type="submit" class="btn btn-primary btn-lg btn-block">Create New Account</button>
+		  </div>
+		</form>		
+	</div>
+</body>
+</html>

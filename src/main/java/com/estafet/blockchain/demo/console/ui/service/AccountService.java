@@ -16,12 +16,17 @@ public class AccountService {
 	private RestTemplate restTemplate;
 
 	public List<Account> getAccounts() {
-		return RestHelper.getRestQuery(restTemplate,
-				System.getenv("BANK_MS_SERVICE_URI") + "/accounts", Account.class);
+		return RestHelper.getRestQuery(restTemplate, System.getenv("BANK_MS_SERVICE_URI") + "/accounts", Account.class);
 	}
 
 	public Account getAccount(int id) {
 		return restTemplate.getForObject(System.getenv("BANK_MS_SERVICE_URI") + "/account/{id}", Account.class, id);
+	}
+
+	public Account createAccount(Account account) {
+		account = restTemplate.postForObject(System.getenv("BANK_MS_SERVICE_URI") + "/account", account,
+				Account.class);
+		return account;
 	}
 
 }

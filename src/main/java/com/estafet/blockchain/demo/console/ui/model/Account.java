@@ -18,8 +18,18 @@ public class Account {
 	private double pendingBalance;
 	
 	private boolean pending;
+	
+	private Double openingDeposit;
 
 	private List<Transaction> transactions = new ArrayList<Transaction>();
+
+	public Double getOpeningDeposit() {
+		return openingDeposit;
+	}
+
+	public void setOpeningDeposit(Double openingDeposit) {
+		this.openingDeposit = openingDeposit;
+	}
 
 	public Integer getId() {
 		return id;
