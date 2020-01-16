@@ -20,12 +20,12 @@ public class AccountService {
 	public List<Account> getAccounts() {
 		List<Account> accounts = RestHelper.getRestQuery(restTemplate,
 				System.getenv("BANK_MS_SERVICE_URI") + "/accounts", Account.class);
-		Collections.sort(accounts, new Comparator<Account>() {
-			@Override
-			public int compare(Account o1, Account o2) {
-				return o1.getId() - o2.getId();
-			}
-		});
+//		Collections.sort(accounts, new Comparator<Account>() {
+//			@Override
+//			public int compare(Account o1, Account o2) {
+//				return o1.getId() - o2.getId();
+//			}
+//		});
 		return accounts;
 	}
 
