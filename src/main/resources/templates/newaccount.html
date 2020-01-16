@@ -17,16 +17,16 @@
 		<form action="#" th:action="@{/newaccount}" th:object="${account}" method="post">
 		  <div class="row">
 		    <div class="col">
-		      <input type="text" class="form-control" placeholder="Account Name" th:field="*{accountName}"/>
+		      <input type="text" class="form-control form-control-lg mb-1" placeholder="Account Name" th:field="*{accountName}"/>
 		    </div>
 		  </div>
 		  <div class="row">
 			  <div class="col">
-			      <input type="text" class="form-control" placeholder="Opening Deposit" th:field="*{openingDeposit}"/>
+			      <input type="text" class="form-control mb-1" placeholder="Opening Deposit" th:field="*{openingDeposit}"/>
 			  </div>
 			  <div class="col">
-			  	<select class="form-control" th:field="*{currency}">
-					<option th:value="'USD'" th:text="USB"></option>
+			  	<select class="form-control mb-1" th:field="*{currency}">
+					<option th:value="'USD'" th:text="USD"></option>
     				<option th:value="'GBP'" th:text="GBP"></option>
     				<option th:value="'BGD'" th:text="BGD"></option>
     				<option th:value="'EUR'" th:text="EUR"></option>
@@ -34,7 +34,9 @@
 			  </div>
 		  </div>
 		  <div class="row">
-		  	<button type="submit" class="btn btn-primary btn-lg btn-block">Create New Account</button>
+		  	<div class="col">
+				<button type="submit" class="btn btn-primary btn-lg">Create New Account</button>
+		  	</div>
 		  </div>
 		</form>		
 	</div>
