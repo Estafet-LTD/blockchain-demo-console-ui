@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.estafet.blockchain.demo.console.ui.model.Account;
+import com.estafet.blockchain.demo.console.ui.model.Money;
 import com.estafet.microservices.scrum.lib.commons.rest.RestHelper;
 
 @Service
@@ -24,8 +25,11 @@ public class AccountService {
 	}
 
 	public Account createAccount(Account account) {
-		account = restTemplate.postForObject(System.getenv("BANK_MS_SERVICE_URI") + "/account", account,
-				Account.class);
+		Money money = new Money();
+		money.setAmount(account.getBalance());
+		account = restTemplate.postForObject(System.getenv("BANK_MS_SERVICE_URI") + "/account", account, Account.class);
+		account = restTemplate.postForObject(System.getenv("BANK_MS_SERVICE_URI") + "/account/{id}/credit", money,
+				Account.class, account.getId());
 		return account;
 	}
 
