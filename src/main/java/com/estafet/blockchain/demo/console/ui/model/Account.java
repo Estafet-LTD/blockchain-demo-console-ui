@@ -3,6 +3,8 @@ package com.estafet.blockchain.demo.console.ui.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Account {
 
 	private Integer id;
@@ -23,6 +25,10 @@ public class Account {
 
 	private List<Transaction> transactions = new ArrayList<Transaction>();
 
+	public String accountNumber() {
+		return StringUtils.leftPad(id.toString(), 9, '0');
+	}
+	
 	public Double getOpeningDeposit() {
 		return openingDeposit;
 	}

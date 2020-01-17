@@ -21,7 +21,7 @@ public class WalletController {
 	}
 	
 	@RequestMapping("/wallet/{address}")
-	public String account(@PathVariable String address, Model model) {
+	public String wallet(@PathVariable String address, Model model) {
 		model.addAttribute("wallet", walletService.getWallet(address));
 		model.addAttribute("walletAddress", address);
 		return "wallet";
