@@ -26,10 +26,8 @@
 			  </div>
 			  <div class="col">
 			  	<select class="form-control mb-1" th:field="*{currency}">
-					<option th:value="'USD'" th:text="USD"></option>
-    				<option th:value="'GBP'" th:text="GBP"></option>
-    				<option th:value="'BGD'" th:text="BGD"></option>
-    				<option th:value="'EUR'" th:text="EUR"></option>
+			  		<option value="">select currency</option>
+    				<option th:each="rate : ${rates}" th:value="${rates.currency}" th:text="${rates.currency}"></option>
 				</select>
 			  </div>
 		  </div>
