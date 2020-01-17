@@ -10,13 +10,15 @@
 		    <li class="breadcrumb-item active" aria-current="page">Accounts</li>
 		  </ol>
 		</nav>
-		<div align="left">
-			<h3>
-			  Accounts
-			</h3>	
-		</div>	
-		<div align="right">
-			<a href="/newaccount" class="btn btn-primary" role="button">Open New Account</a>
+		<div class="row">
+			<div class="col" align="left">
+				<h3>
+				  Accounts
+				</h3>	
+			</div>	
+			<div class="col" align="right">
+				<a href="/newaccount" class="btn btn-primary" role="button">Open New Account</a>
+			</div>		
 		</div>				
 		<div th:each="account : ${accounts}" class="card mb-3" style="width: 30rem;">
 		  <div class="card-body">
