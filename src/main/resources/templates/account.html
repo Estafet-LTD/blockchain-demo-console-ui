@@ -11,22 +11,25 @@
 		    <li class="breadcrumb-item active" aria-current="page">Account</li>
 		  </ol>
 		</nav>	
-		<div align="left">
-			<h3>
-			  Account
-			  <small class="text-muted" th:text="${account.accountName}"></small>
-			</h3>	
-			<h3>
-			  Balance
-			  <small class="text-muted" th:text="${account.balance}"></small>
-			</h3>		
-			<h3>
-			  Pending Balance
-			  <small class="text-muted" th:text="${account.pendingBalance}"></small>
-			</h3>
-		</div>	
-		<div align="right">
-			<a href="#" class="btn btn-primary" role="button">Make Wallet Payment</a>
+		<div class=row>
+			<div class="col">
+				<h3>
+				  Account
+				  <small class="text-muted" th:text="${account.accountName}"></small>
+				</h3>				
+			</div>
+			<div class="col">
+				<h3>
+				  Balance
+				  <small class="text-muted" th:text="${account.balance}"></small>
+				</h3>			
+			</div>
+			<div class="col">
+				<h3>
+				  Pending Balance
+				  <small class="text-muted" th:text="${account.pendingBalance}"></small>
+				</h3>			
+			</div>		
 		</div>		
 		<table class="table table-striped">
 		  <thead>

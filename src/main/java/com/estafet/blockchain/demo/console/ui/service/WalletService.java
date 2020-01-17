@@ -16,11 +16,15 @@ public class WalletService {
 	private RestTemplate restTemplate;
 
 	public List<Wallet> getWallets() {
-		return RestHelper.getRestQuery(restTemplate, System.getenv("WALLET_MS_SERVICE_URI") + "/wallets", Wallet.class);
+		return RestHelper.getRestQuery(restTemplate, walletServiceURI() + "/wallets", Wallet.class);
+	}
+
+	private String walletServiceURI() {
+		return System.getenv("WALLET_MS_SERVICE_URI");
 	}
 
 	public Wallet getWallet(String address) {
-		return restTemplate.getForObject(System.getenv("WALLET_MS_SERVICE_URI") + "/wallet/{address}", Wallet.class,
+		return restTemplate.getForObject(walletServiceURI() + "/wallet/{address}", Wallet.class,
 				address);
 	}
 

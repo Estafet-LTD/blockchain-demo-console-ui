@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.estafet.blockchain.demo.console.ui.model.Account;
 import com.estafet.blockchain.demo.console.ui.service.AccountService;
 import com.estafet.blockchain.demo.console.ui.service.ExchangeRateService;
+import com.estafet.blockchain.demo.console.ui.service.WalletService;
 
 @Controller
 public class AccountController {
@@ -21,7 +22,7 @@ public class AccountController {
 	
 	@Autowired
 	private ExchangeRateService exchangeRateService;
-	
+		
 	@RequestMapping("/accounts")
 	public String accounts(Model model) {
 		model.addAttribute("accounts", accountService.getAccounts());
