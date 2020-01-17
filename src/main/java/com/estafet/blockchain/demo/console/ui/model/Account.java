@@ -25,7 +25,7 @@ public class Account {
 
 	private List<Transaction> transactions = new ArrayList<Transaction>();
 
-	public String accountNumber() {
+	public String getAccountNumber() {
 		return StringUtils.leftPad(id.toString(), 9, '0');
 	}
 	
