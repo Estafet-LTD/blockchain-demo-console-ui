@@ -30,7 +30,7 @@ public class AccountService {
 
 	public Account createAccount(Account account) {
 		Money money = new Money();
-		money.setAmount(account.getBalance());
+		money.setAmount(account.getOpeningDeposit());
 		account = restTemplate.postForObject(bankServiceURI() + "/account", account, Account.class);
 		account = restTemplate.postForObject(bankServiceURI() + "/account/{id}/credit", money,
 				Account.class, account.getId());
