@@ -21,15 +21,21 @@
 			<div class="col">
 				<h3>
 				  Balance
-				  <small class="text-muted" th:text="${account.balance}"></small>
+				  <small class="text-muted" th:text="${account.balance + ' ' + account.currency}"></small>
 				</h3>			
 			</div>
 			<div class="col">
 				<h3>
 				  Pending Balance
-				  <small class="text-muted" th:text="${account.pendingBalance}"></small>
+				  <small class="text-muted" th:text="${account.pendingBalance + ' ' + account.currency}"></small>
 				</h3>			
 			</div>		
+			<div class="col">
+				<h3>
+				  Status
+				  <small class="text-muted" th:text="${account.status}"></small>
+				</h3>			
+			</div>
 		</div>		
 		<table class="table table-striped">
 		  <thead>
@@ -44,7 +50,7 @@
 		    <tr th:each="transaction : ${account.transactions}">
 		      <th scope="row" th:text="${transaction.id}"/>
 		      <td th:text="${transaction.description}"/>
-		      <td th:text="${transaction.amount}"/>
+		      <td th:text="${transaction.amount  + ' ' + account.currency}"/>
 		      <td th:text="${transaction.status}"/>
 		    </tr>
 		  </tbody>
