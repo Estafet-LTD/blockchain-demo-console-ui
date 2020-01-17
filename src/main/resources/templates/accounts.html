@@ -22,7 +22,7 @@
 		  <div class="card-body">
 		    <h5 class="card-title" th:text="${account.accountName}"/>
 		    <h6 class="card-subtitle mb-2 text-muted" th:text="${account.balance + ' ' + account.currency}"/>
-		    <p class="card-text"><b>Last transaction</b>&nbsp;...<span th:text="${account.transactions[0].description + ' ' + account.transactions[0].amount + ' ' account.currency}"/></p>
+		    <p class="card-text"><b>Last transaction</b>&nbsp;...<span th:text="${account.transactions[0].description + ' ' + account.transactions[0].amount + ' ' + account.currency}"/></p>
 		    <a th:href="@{'/account/' + ${account.id}}" class="card-link">Details</a>
 		  </div>
 		</div>		
