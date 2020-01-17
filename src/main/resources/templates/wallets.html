@@ -15,7 +15,7 @@
 		  <div class="card-body">
 		    <h5 class="card-title" th:text="${wallet.walletName}"/>
 		    <h6 class="card-subtitle mb-2 text-muted" th:text="${wallet.walletAddress}"/>
-		    <p class="card-text" th:text="${wallet.Balance} + ' ' Estacoin"></p>
+		    <p class="card-text" th:text="${wallet.Balance} + ' ' + Estacoin"></p>
 		    <a th:href="@{'/wallet/' + ${wallet.walletAddress}}" class="btn btn-secondary btn-sm">Details</a>
 		  </div>
 		</div>			
