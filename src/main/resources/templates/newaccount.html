@@ -27,7 +27,7 @@
 			  <div class="col">
 			  	<select class="form-control mb-1" th:field="*{currency}">
 			  		<option value="">select currency</option>
-    				<option th:each="rate : ${rates}" th:value="${rates.currency}" th:text="${rates.currency}"></option>
+    				<option th:each="rate : ${rates}" th:value="${rate.currency}" th:text="${rate.currency}"></option>
 				</select>
 			  </div>
 		  </div>
