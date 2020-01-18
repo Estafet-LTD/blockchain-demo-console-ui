@@ -8,12 +8,9 @@
 		  <ol class="breadcrumb">
 		    <li class="breadcrumb-item"><a href="/">Home</a></li>
 		    <li class="breadcrumb-item"><a href="/accounts">Accounts</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">New Account</li>
+		    <li class="breadcrumb-item active" aria-current="page">Open Account</li>
 		  </ol>
-		</nav>		
-		<h3>
-		  New Account
-		</h3>	
+		</nav>			
 		<form action="#" th:action="@{/newaccount}" th:object="${newAccount}" method="post">
 		  <div class="row">
 		    <div class="col">
@@ -22,10 +19,10 @@
 		  </div>
 		  <div class="row">
 			  <div class="col">
-			      <input type="text" class="form-control mb-1" placeholder="Opening Deposit" th:field="*{openingDeposit}"/>
+			      <input type="text" class="form-control form-control-lg mb-1" placeholder="Opening Deposit" th:field="*{openingDeposit}"/>
 			  </div>
 			  <div class="col">
-			  	<select class="form-control mb-1" th:field="*{currency}">
+			  	<select class="form-control form-control-lg mb-1" th:field="*{currency}">
 			  		<option value="">select currency</option>
     				<option th:each="rate : ${rates}" th:value="${rate.currency}" th:text="${rate.currency}"></option>
 				</select>

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.estafet.blockchain.demo.console.ui.model.Account;
 import com.estafet.blockchain.demo.console.ui.model.BankTransfer;
+import com.estafet.blockchain.demo.console.ui.model.WalletTransfer;
 import com.estafet.blockchain.demo.console.ui.service.AccountService;
 import com.estafet.blockchain.demo.console.ui.service.WalletService;
 
@@ -52,6 +53,21 @@ public class WalletController {
 	public String bankTransferSubmit(@ModelAttribute BankTransfer bankTransfer) {
 		walletService.brankTransfer(bankTransfer);
 		return "redirect:/wallet/" + bankTransfer.getWalletAddress();
+	}	
+	
+	@GetMapping("/wallettransfer/{address}")
+	public String walletTransferForm(@PathVariable String address, Model model) {	
+		model.addAttribute("walletAddress", address);
+		model.addAttribute("wallets", walletService.getWallets());
+		WalletTransfer transfer = new WalletTransfer();
+		transfer.setFromAddress(address);
+		model.addAttribute("transfer", transfer);
+		return "wallettransfer";
+	}
+	
+	@PostMapping("/wallettransfer")
+	public String walletTransferSubmit(@ModelAttribute WalletTransfer walletTransfer) {
+		return "redirect:/wallet/" + walletTransfer.getFromAddress();
 	}	
 	
 	@GetMapping("/deletewallets")
