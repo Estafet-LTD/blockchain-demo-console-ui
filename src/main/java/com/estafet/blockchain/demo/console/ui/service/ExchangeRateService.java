@@ -28,4 +28,8 @@ public class ExchangeRateService {
 				currency);
 	}
 
+	public void saveExchangeRate(ExchangeRate rate) {
+		restTemplate.put(exchangeRateServiceURI() + "/exchange-rate", rate, ExchangeRate.class);
+	}
+
 }

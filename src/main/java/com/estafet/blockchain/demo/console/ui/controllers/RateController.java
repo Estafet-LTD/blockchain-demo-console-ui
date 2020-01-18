@@ -32,6 +32,7 @@ public class RateController {
 	
 	@PostMapping("/rate")
 	public String rateSubmit(@ModelAttribute ExchangeRate rate) {
+		exchangeRateService.saveExchangeRate(rate);
 		return "redirect:/rates";
 	}
 

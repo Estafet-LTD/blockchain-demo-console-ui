@@ -1,0 +1,13 @@
+{
+	"request": {
+		"method": "PUT",
+		"url": "/console-ui/currency-converter-ms/exchange-rate"
+	},
+	"response": {
+		"status": 200,
+		"body": "{\"currency\": \"USD\", \"rate\": 250 }",
+		"headers": {
+            "Content-Type": "application/json"
+        }
+	}
+}
