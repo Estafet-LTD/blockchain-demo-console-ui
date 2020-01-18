@@ -14,7 +14,7 @@
 		  <a href="/accounts" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Bank Accounts</h5>
-		      <small class="text-muted" th:text="${accounts} + accounts"/>
+		      <small class="text-muted" th:text="${accounts} + ' ' + accounts"/>
 		    </div>
 		    <p class="mb-1">Create new accounts and view the transaction details for a particular account.</p>
 		    <small>Donec id elit non mi porta.</small>
@@ -22,7 +22,7 @@
 		  <a href="/wallets" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Wallets</h5>
-		      <small class="text-muted" th:text="${wallets} + wallets"/>
+		      <small class="text-muted" th:text="${wallets} + ' ' + wallets"/>
 		    </div>
 		    <p class="mb-1">View the Estacoin wallet balances, transfer Estacoin from one wallet to another and make bank payments to a specific wallet.</p>
 		    <small class="text-muted">Donec id elit non mi porta.</small>
@@ -30,7 +30,7 @@
 		  <a href="/rates" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Exchange Rates</h5>
-		      <small class="text-muted" th:text="${rates} + rates"/>
+		      <small class="text-muted" th:text="${rates} + ' ' + rates"/>
 		    </div>
 		    <p class="mb-1">View exchange rates to Esta Coin, create new rates or modify existing rates.</p>
 		    <small class="text-muted">Donec id elit non mi porta.</small>
