@@ -37,7 +37,7 @@ public class RateController {
 	}
 
 	@RequestMapping("/newrate")
-	public String newRate(@PathVariable String currency, Model model) {
+	public String newRate(Model model) {
 		model.addAttribute("exchangeRate", new ExchangeRate());
 		return "newrate";
 	}
