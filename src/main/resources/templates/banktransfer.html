@@ -15,12 +15,13 @@
 		<div class="card">
 		  <h2 class="card-header">Wallet&nbsp;<small th:text="${wallet.walletName}"></small></h2>
 		  <div class="card-body">
-		    <h3 class="card-title" th:text="${account.balance}"/>
-		    <form action="#" th:action="@{/banktransfer}" th:object="${transfer}" method="post">
-			    <input type="text" class="form-control form-control-lg mb-1" placeholder="0.00" th:field="*{transferAmount}"/>
+		    <h3 class="card-title" th:text="'Available Balance ' + ${account.balance}"/>
+		    <form class="form-group" action="#" th:action="@{/banktransfer}" th:object="${transfer}" method="post">
+		    	<label for="transferAmount">Transfer Amount</label>
+			    <input type="text" class="form-control form-control-lg mb-1" th:field="*{transferAmount}" id="transferAmount"/>
 			    <input id="accountId" th:field="*{accountId}" type="hidden"/>
 			    <input id="walletAddress" th:field="*{walletAddress}" type="hidden"/>
-			    <button type="submit" class="btn btn-primary">Transfer</button>
+			    <button type="submit" class="btn btn-primary mb-2">Transfer</button>
 		    </form>
 		  </div>
 		</div>		
