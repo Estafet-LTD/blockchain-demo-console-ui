@@ -16,13 +16,13 @@
 				  <div class="card-body">
 				    <h4 class="card-title" th:text="${rate.currency}"/>
 				    <h5 class="card-subtitle mb-2 text-muted" th:text="${rate.rate}"/>
-				    <a th:href="@{'/account/' + ${account.id}}" class="btn btn-primary btn-sm">Edit</a>
+				    <a th:href="@{'/rate/' + ${rate.id}}" class="btn btn-primary btn-sm">Edit</a>
 				  </div>
 				</div>				
 			</div>
 			<div class="col" align="right">
-				<a href="/newaccount" class="btn btn-primary" role="button">Open Account</a>
-				<a href="/deleteaccounts" class="btn btn-primary" role="button">Delete Accounts</a>			
+				<a href="/newrate" class="btn btn-primary" role="button">New Exchange Rate</a>
+				<a href="/deleterates" class="btn btn-primary" role="button">Delete Rates</a>			
 			</div>
 		</div>
 	</div>
