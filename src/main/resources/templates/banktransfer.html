@@ -12,18 +12,18 @@
 		    <li class="breadcrumb-item active" aria-current="page">Bank Transfer</li>
 		  </ol>
 		</nav>	
-		<form action="#" th:action="@{/banktransfer}" th:object="${banktransfer}" method="post">
-			<div class="card">
-			  <h2 class="card-header">Wallet&nbsp;<small th:text="${wallet.walletName}"></small></h2>
-			  <div class="card-body">
-			    <h3 class="card-title" th:text="Account Balance + ' ' + ${account.balance} + ' ' + ${account.currency}"/>
+		<div class="card">
+		  <h2 class="card-header">Wallet&nbsp;<small th:text="${wallet.walletName}"></small></h2>
+		  <div class="card-body">
+		    <h3 class="card-title" th:text="Account Balance + ' ' + ${account.balance} + ' ' + ${account.currency}"/>
+		    <form action="#" th:action="@{/banktransfer}" th:object="${banktransfer}" method="post">
 			    <input type="text" class="form-control form-control-lg mb-1" placeholder="0.00" th:field="*{transferAmount}"/>
 			    <input id="accountId" th:field="*{accountId}" type="hidden"/>
 			    <input id="walletAddress" th:field="*{walletAddress}" type="hidden"/>
-			    <a href="#" class="btn btn-primary">Transfer</a>
-			  </div>
-			</div>
-		</form>
+			    <button type="submit" class="btn btn-primary">Transfer</button>
+		    </form>
+		  </div>
+		</div>		
 	</div>
 </body>
 </html>

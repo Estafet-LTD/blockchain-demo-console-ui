@@ -50,9 +50,8 @@ public class WalletController {
 	}
 	
 	@PostMapping("/banktransfer")
-	public String newAccountSubmit(@ModelAttribute Account account) {
-		account = accountService.createAccount(account);
-		return "redirect:/account/" + account.getId();
+	public String newAccountSubmit(@ModelAttribute BankTransfer bankTransfer) {
+		return "redirect:/wallet/" + bankTransfer.getWalletAddress();
 	}	
 	
 	@GetMapping("/deletewallets")
