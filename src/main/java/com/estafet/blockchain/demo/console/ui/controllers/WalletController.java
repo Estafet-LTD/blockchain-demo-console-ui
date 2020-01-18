@@ -46,7 +46,7 @@ public class WalletController {
 		model.addAttribute("bankTransfer", bankTransfer);
 		model.addAttribute("account", account);		
 		model.addAttribute("wallet", walletService.getWallet(address));
-		return "newaccount";
+		return "banktransfer";
 	}
 	
 	@PostMapping("/banktransfer")
