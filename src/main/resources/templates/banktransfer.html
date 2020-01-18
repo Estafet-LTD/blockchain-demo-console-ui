@@ -15,7 +15,7 @@
 		<div class="card">
 		  <h2 class="card-header">Wallet&nbsp;<small th:text="${wallet.walletName}"></small></h2>
 		  <div class="card-body">
-		    <h3 class="card-title" th:text="Account Balance + ' ' + ${account.balance} + ' ' + ${account.currency}"/>
+		    <h3 class="card-title" th:text="${account.balance}"/>
 		    <form action="#" th:action="@{/banktransfer}" th:object="${banktransfer}" method="post">
 			    <input type="text" class="form-control form-control-lg mb-1" placeholder="0.00" th:field="*{transferAmount}"/>
 			    <input id="accountId" th:field="*{accountId}" type="hidden"/>
