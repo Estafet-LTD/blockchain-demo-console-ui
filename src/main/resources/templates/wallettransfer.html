@@ -21,7 +21,7 @@
 			  <div class="col">
 			  	<select class="form-control form-control-lg mb-1" th:field="*{toAddress}">
 			  		<option value="">Select Wallet</option>
-    				<option th:each="wallet : ${wallets}" th:value="${wallets.walletAddress}" th:text="${wallet.walletName}"></option>
+    				<option th:each="wallet : ${wallets}" th:value="${wallet.walletAddress}" th:text="${wallet.walletName}"></option>
 				</select>
 			  </div>
 		  </div>
