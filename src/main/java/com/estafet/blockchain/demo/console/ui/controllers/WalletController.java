@@ -39,10 +39,10 @@ public class WalletController {
 	@GetMapping("/banktransfer/{address}")
 	public String bankTransferForm(@PathVariable String address, Model model) {
 		Account account = accountService.getAccountByWalletAddress(address);
-		BankTransfer bankTransfer = new BankTransfer();
-		bankTransfer.setAccountId(account.getId());
-		bankTransfer.setWalletAddress(address);
-		model.addAttribute("bankTransfer", bankTransfer);
+		BankTransfer transfer = new BankTransfer();
+		transfer.setAccountId(account.getId());
+		transfer.setWalletAddress(address);
+		model.addAttribute("transfer", transfer);
 		model.addAttribute("account", account);		
 		model.addAttribute("wallet", walletService.getWallet(address));
 		return "banktransfer";
