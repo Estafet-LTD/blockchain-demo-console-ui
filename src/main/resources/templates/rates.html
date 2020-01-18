@@ -16,7 +16,7 @@
 				  <div class="card-body">
 				    <h4 class="card-title" th:text="${rate.currency}"/>
 				    <h5 class="card-subtitle mb-2 text-muted" th:text="${rate.rate}"/>
-				    <a th:href="@{'/rate/' + ${rate.id}}" class="btn btn-primary btn-sm">Edit</a>
+				    <a th:href="@{'/rate/' + ${rate.currency}}" class="btn btn-primary btn-sm">Edit</a>
 				  </div>
 				</div>				
 			</div>
