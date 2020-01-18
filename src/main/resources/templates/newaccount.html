@@ -11,10 +11,11 @@
 		    <li class="breadcrumb-item active" aria-current="page">Open Account</li>
 		  </ol>
 		</nav>			
-		<form action="#" th:action="@{/rate}" th:object="${rate}" method="post">
+				<form action="#" th:action="@{/newaccount}" th:object="${newAccount}" method="post">
 		  <div class="row">
 			  <div class="col">
-			      <input type="text" class="form-control form-control-lg mb-1"  th:field="*{rate}"/>
+		  		  <input type="text" class="form-control form-control-lg mb-1" placeholder="Account Name" th:field="*{accountName}"/>
+			      <input type="text" class="form-control mb-1" placeholder="Opening Deposit" th:field="*{openingDeposit}"/>
 			  </div>
 			  <div class="col">
 			  	<select class="form-control form-control-lg mb-1" th:field="*{currency}">

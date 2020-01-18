@@ -11,7 +11,7 @@
 		  </ol>
 		</nav>
 		<div class="list-group">
-		  <a href="/accounts" class="list-group-item list-group-item-action flex-column align-items-start">
+		  <a href="/accounts" class="list-group-item list-group-item-action flex-column align-items-start" id="accounts">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h4 class="mb-1">Bank Accounts</h4>
 		      <small class="text-muted" th:text="${accounts} + ' ' + accounts"/>
@@ -19,7 +19,7 @@
 		    <p class="mb-1">Create new accounts and view the transaction details for a particular account.</p>
 		    <small class="text-muted" th:text="${accounts} + ' ' + accounts"/>
 		  </a>
-		  <a href="/wallets" class="list-group-item list-group-item-action flex-column align-items-start">
+		  <a href="/wallets" class="list-group-item list-group-item-action flex-column align-items-start" id="wallets">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h4 class="mb-1">Wallets</h4>
 		      <small class="text-muted" th:text="${wallets} + ' ' + wallets"/>
@@ -27,12 +27,12 @@
 		    <p class="mb-1">View the Estacoin wallet balances, transfer Estacoin from one wallet to another and make bank payments to a specific wallet.</p>
 		    <small class="text-muted" th:text="${wallets} + ' ' + wallets"/>
 		  </a>
-		  <a href="/rates" class="list-group-item list-group-item-action flex-column align-items-start">
+		  <a href="/rates" class="list-group-item list-group-item-action flex-column align-items-start" id="rates">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h4 class="mb-1">Exchange Rates</h4>
 		      <small class="text-muted" th:text="${rates} + ' ' + rates"/>
 		    </div>
-		    <p class="mb-1">View exchange rates to Esta Coin, create new rates or modify existing rates.</p>
+		    <p class="mb-1">View exchange rates to Estacoin, create new rates or modify existing rates.</p>
 		    <small class="text-muted" th:text="${rates} + ' ' + rates"/>
 		  </a>
 		</div>		
