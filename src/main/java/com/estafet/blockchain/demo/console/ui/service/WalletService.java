@@ -8,6 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.estafet.blockchain.demo.console.ui.model.BankTransfer;
 import com.estafet.blockchain.demo.console.ui.model.Wallet;
+import com.estafet.blockchain.demo.console.ui.model.WalletTransfer;
 import com.estafet.microservices.scrum.lib.commons.rest.RestHelper;
 
 @Service
@@ -36,6 +37,12 @@ public class WalletService {
 		restTemplate.postForObject(walletServiceURI() + "/wallet/{walletAddress}/currency-transfer/{amount}", null,
 				Wallet.class, bankTransfer.getWalletAddress(), bankTransfer.getTransferAmount());
 
+	}
+
+	public void walletTransfer(WalletTransfer walletTransfer) {
+		restTemplate.postForObject(walletServiceURI() + "/wallet/from/{fromWalletAddress}/to/{toWalletAddress}/crypto-transfer/{cryptoAmount}", null,
+				Wallet.class, walletTransfer.getFromAddress(), walletTransfer.getToAddress(), walletTransfer.getTransferAmount());
+		
 	}
 
 }

@@ -67,6 +67,7 @@ public class WalletController {
 	
 	@PostMapping("/wallettransfer")
 	public String walletTransferSubmit(@ModelAttribute WalletTransfer walletTransfer) {
+		walletService.walletTransfer(walletTransfer);
 		return "redirect:/wallet/" + walletTransfer.getFromAddress();
 	}	
 	
