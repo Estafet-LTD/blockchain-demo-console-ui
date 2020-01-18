@@ -11,7 +11,32 @@
 		    <li class="breadcrumb-item active" aria-current="page">Rate</li>
 		  </ol>
 		</nav>		
-		<h2>Rate</h2>
+
+		<form action="#" th:action="@{/newaccount}" th:object="${newAccount}" method="post">
+		  <div class="row">
+		    <div class="col">
+		      <input type="text" class="form-control form-control-lg mb-1" placeholder="Account Name" th:field="*{accountName}"/>
+		    </div>
+		  </div>
+		  <div class="row">
+			  <div class="col">
+			      <input type="text" class="form-control form-control-lg mb-1" placeholder="Opening Deposit" th:field="*{openingDeposit}"/>
+			  </div>
+			  <div class="col">
+			  	<select class="form-control form-control-lg mb-1" th:field="*{currency}">
+			  		<option value="">select currency</option>
+    				<option th:each="rate : ${rates}" th:value="${rate.currency}" th:text="${rate.currency}"></option>
+				</select>
+			  </div>
+		  </div>
+		  <div class="row">
+		  	<div class="col">
+				<button type="submit" class="btn btn-primary btn-lg">Create New Account</button>
+		  	</div>
+		  </div>
+		</form>		
+
+		
 		<div>
 			<form action="#" th:action="@{'/rate/'} + ${currency} " th:object="${task}" method="post">
 				<div>

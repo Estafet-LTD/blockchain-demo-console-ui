@@ -16,12 +16,15 @@ public class ExchangeRateService {
 	private RestTemplate restTemplate;
 
 	public List<ExchangeRate> getExchangeRates() {
-		return RestHelper.getRestQuery(restTemplate, exchangeRateServiceURI() + "/exchange-rates",
-				ExchangeRate.class);
+		return RestHelper.getRestQuery(restTemplate, exchangeRateServiceURI() + "/exchange-rates", ExchangeRate.class);
 	}
 
 	private String exchangeRateServiceURI() {
 		return System.getenv("CURRENCY_CONVERTER_MS_SERVICE_URI");
+	}
+
+	public ExchangeRate getExchangeRate(String currency) {
+		return restTemplate.getForObject(exchangeRateServiceURI() + "/rate/{currency}", ExchangeRate.class, currency);
 	}
 
 }
