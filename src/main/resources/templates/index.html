@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<body>
+	<div layout:fragment="content">
+		<!-- content goes here -->
+        <nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item active" aria-current="page">Home</li>
+		  </ol>
+		</nav>
+		<div class="list-group">
+		  <a href="/accounts" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">Bank Accounts</h5>
+		      <small>3 days ago</small>
+		    </div>
+		    <p class="mb-1">Create new accounts and view the transaction details for a particular account.</p>
+		    <small>Donec id elit non mi porta.</small>
+		  </a>
+		  <a href="/wallets" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">Wallets</h5>
+		      <small class="text-muted">3 days ago</small>
+		    </div>
+		    <p class="mb-1">View the Estacoin wallet balances, transfer Estacoin from one wallet to another and make bank payments to a specific wallet.</p>
+		    <small class="text-muted">Donec id elit non mi porta.</small>
+		  </a>
+		  <a href="/rates" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">Exchange Rates</h5>
+		      <small class="text-muted">3 days ago</small>
+		    </div>
+		    <p class="mb-1">Manage the list of exchange rates to Esta Coin. Users can create new rates or modify existing rates.</p>
+		    <small class="text-muted">Donec id elit non mi porta.</small>
+		  </a>
+		</div>		
+	</div>
+</body>
+</html>
