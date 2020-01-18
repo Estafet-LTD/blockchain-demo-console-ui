@@ -50,6 +50,7 @@ public class WalletController {
 	
 	@PostMapping("/banktransfer")
 	public String bankTransferSubmit(@ModelAttribute BankTransfer bankTransfer) {
+		walletService.brankTransfer(bankTransfer);
 		return "redirect:/wallet/" + bankTransfer.getWalletAddress();
 	}	
 	
