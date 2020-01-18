@@ -36,4 +36,16 @@ public class RateController {
 		return "redirect:/rates";
 	}
 
+	@RequestMapping("/newrate")
+	public String newRate(@PathVariable String currency, Model model) {
+		model.addAttribute("exchangeRate", new ExchangeRate());
+		return "newrate";
+	}
+	
+	@PostMapping("/newrate")
+	public String newRateSubmit(@ModelAttribute ExchangeRate rate) {
+		exchangeRateService.createExchangeRate(rate);
+		return "redirect:/rates";
+	}
+	
 }

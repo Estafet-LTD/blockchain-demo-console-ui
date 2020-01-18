@@ -32,4 +32,8 @@ public class ExchangeRateService {
 		restTemplate.put(exchangeRateServiceURI() + "/exchange-rate", rate, ExchangeRate.class);
 	}
 
+	public void createExchangeRate(ExchangeRate rate) {
+		restTemplate.postForObject(exchangeRateServiceURI() + "/exchange-rate", rate, ExchangeRate.class);		
+	}
+
 }
