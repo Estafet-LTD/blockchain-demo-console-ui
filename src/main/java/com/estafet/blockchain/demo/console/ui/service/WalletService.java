@@ -28,4 +28,8 @@ public class WalletService {
 				address);
 	}
 
+	public void deleteWallets() {
+		restTemplate.delete(walletServiceURI() + "/wallets");
+	}
+
 }

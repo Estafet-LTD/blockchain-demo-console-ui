@@ -42,6 +42,13 @@ public class AccountController {
 		return "newaccount";
 	}
 	
+	@GetMapping("/deleteaccounts")
+	public String deleteAccounts(Model model) {
+		accountService.deleteAccounts();
+		model.addAttribute("accounts", accountService.getAccounts());
+		return "accounts";
+	}
+	
 	@PostMapping("/newaccount")
 	public String newAccountSubmit(@ModelAttribute Account account) {
 		account = accountService.createAccount(account);

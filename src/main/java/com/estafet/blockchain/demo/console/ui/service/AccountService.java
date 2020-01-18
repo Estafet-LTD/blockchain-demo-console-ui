@@ -37,4 +37,8 @@ public class AccountService {
 		return account;
 	}
 
+	public void deleteAccounts() {
+		restTemplate.delete(bankServiceURI() + "/accounts");
+	}
+
 }

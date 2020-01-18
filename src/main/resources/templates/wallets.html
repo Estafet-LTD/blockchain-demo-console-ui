@@ -10,15 +10,21 @@
 		    <li class="breadcrumb-item active" aria-current="page">Wallets</li>
 		  </ol>
 		</nav>	
-		<h3> Wallets</h3>				
-		<div th:each="wallet : ${wallets}" class="card mb-3" style="width: 20rem;">
-		  <div class="card-body">
-		    <h5 class="card-title" th:text="${wallet.walletName}"/>
-		    <h6 class="card-subtitle mb-2 text-muted" th:text="${wallet.walletAddress}"/>
-		    <p class="card-text" th:text="${wallet.balance} + ' ' + Estacoin"></p>
-		    <a th:href="@{'/wallet/' + ${wallet.walletAddress}}" class="btn btn-secondary btn-sm">Details</a>
-		  </div>
-		</div>			
+		<div class="row">
+			<div class="col">
+				<div th:each="wallet : ${wallets}" class="card mb-3" style="width: 20rem;">
+				  <div class="card-body">
+				    <h4 class="card-title" th:text="${wallet.walletName}"/>
+				    <h5 class="card-subtitle mb-2 text-muted" th:text="${wallet.balance} + ' ' + Estacoin"/>
+				    <p class="card-text" th:text="${wallet.walletAddress}"></p>
+				    <a th:href="@{'/wallet/' + ${wallet.walletAddress}}" class="btn btn-primary btn-sm">Details</a>
+				  </div>
+				</div>				
+			</div>
+			<div class="col" align="right">
+				<a href="/deletewallets" class="btn btn-primary" role="button">Delete Wallets</a>			
+			</div>
+		</div>				
 	</div>
 </body>
 </html>
