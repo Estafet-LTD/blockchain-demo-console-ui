@@ -24,7 +24,8 @@ public class ExchangeRateService {
 	}
 
 	public ExchangeRate getExchangeRate(String currency) {
-		return restTemplate.getForObject(exchangeRateServiceURI() + "/exchange-rate/{currency}", ExchangeRate.class, currency);
+		return restTemplate.getForObject(exchangeRateServiceURI() + "/exchange-rate/{currency}", ExchangeRate.class,
+				currency);
 	}
 
 }
