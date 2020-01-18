@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.estafet.blockchain.demo.console.ui.model.Account;
+import com.estafet.blockchain.demo.console.ui.model.NewAccount;
 import com.estafet.blockchain.demo.console.ui.service.AccountService;
 import com.estafet.blockchain.demo.console.ui.service.ExchangeRateService;
 
@@ -43,8 +44,8 @@ public class AccountController {
 	}
 	
 	@PostMapping("/newaccount")
-	public String newAccountSubmit(@ModelAttribute Account account) {
-		account = accountService.createAccount(account);
+	public String newAccountSubmit(@ModelAttribute NewAccount newAccount) {
+		Account account = accountService.createAccount(newAccount);
 		return "redirect:/account/" + account.getId();
 	}
 

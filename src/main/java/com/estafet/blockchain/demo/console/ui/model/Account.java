@@ -21,20 +21,10 @@ public class Account {
 	
 	private boolean pending;
 	
-	private Double openingDeposit;
-
 	private List<Transaction> transactions = new ArrayList<Transaction>();
 
 	public String getAccountNumber() {
 		return StringUtils.leftPad(id.toString(), 9, '0');
-	}
-	
-	public Double getOpeningDeposit() {
-		return openingDeposit;
-	}
-
-	public void setOpeningDeposit(Double openingDeposit) {
-		this.openingDeposit = openingDeposit;
 	}
 
 	public Integer getId() {

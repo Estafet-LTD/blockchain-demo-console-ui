@@ -14,7 +14,7 @@
 		<h3>
 		  New Account
 		</h3>	
-		<form action="#" th:action="@{/newaccount}" th:object="${account}" method="post">
+		<form action="#" th:action="@{/newaccount}" th:object="${newAccount}" method="post">
 		  <div class="row">
 		    <div class="col">
 		      <input type="text" class="form-control form-control-lg mb-1" placeholder="Account Name" th:field="*{accountName}"/>

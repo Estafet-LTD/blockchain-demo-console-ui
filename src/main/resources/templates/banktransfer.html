@@ -18,10 +18,10 @@
 		    <h3 class="card-title" th:text="'Available Balance ' + ${account.balance}"/>
 		    <form class="form-group" action="#" th:action="@{/banktransfer}" th:object="${transfer}" method="post">
 		    	<label for="transferAmount">Transfer Amount</label>
-			    <input type="text" class="form-control form-control-lg mb-1" th:field="*{transferAmount}" id="transferAmount"/>
+			    <input type="text" class="form-control form-control-lg mb-2" th:field="*{transferAmount}" id="transferAmount"/>
 			    <input id="accountId" th:field="*{accountId}" type="hidden"/>
 			    <input id="walletAddress" th:field="*{walletAddress}" type="hidden"/>
-			    <button type="submit" class="btn btn-primary mb-2">Transfer</button>
+			    <button type="submit" class="btn btn-primary">Transfer</button>
 		    </form>
 		  </div>
 		</div>		
