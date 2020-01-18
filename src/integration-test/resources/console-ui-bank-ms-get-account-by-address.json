@@ -1,7 +1,7 @@
 {
 	"request": {
-		"method": "POST",
-		"url": "/console-ui/bank-ms/account"
+		"method": "GET",
+		"url": "/console-ui/bank-ms/account/walletAddress/0x1b996c229735359188ad29c3988f0558320f8764"
 	},
 	"response": {
 		"status": 200,

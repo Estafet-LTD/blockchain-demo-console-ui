@@ -4,9 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.estafet.blockchain.demo.console.ui.model.Account;
+import com.estafet.blockchain.demo.console.ui.model.BankTransfer;
+import com.estafet.blockchain.demo.console.ui.model.Wallet;
+import com.estafet.blockchain.demo.console.ui.service.AccountService;
 import com.estafet.blockchain.demo.console.ui.service.WalletService;
 
 @Controller
@@ -14,6 +20,9 @@ public class WalletController {
 
 	@Autowired
 	private WalletService walletService;
+	
+	@Autowired
+	private AccountService accountService;
 	
 	@RequestMapping("/wallets")
 	public String wallets(Model model) {
@@ -27,6 +36,24 @@ public class WalletController {
 		model.addAttribute("walletAddress", address);
 		return "wallet";
 	}
+	
+	@GetMapping("/banktransfer/{address}")
+	public String bankTransferForm(@PathVariable String address, Model model) {
+		Account account = accountService.getAccountByWalletAddress(address);
+		BankTransfer bankTransfer = new BankTransfer();
+		bankTransfer.setAccountId(account.getId());
+		bankTransfer.setWalletAddress(address);
+		model.addAttribute("bankTransfer", bankTransfer);
+		model.addAttribute("account", account);		
+		model.addAttribute("wallet", walletService.getWallet(address));
+		return "newaccount";
+	}
+	
+	@PostMapping("/banktransfer")
+	public String newAccountSubmit(@ModelAttribute Account account) {
+		account = accountService.createAccount(account);
+		return "redirect:/account/" + account.getId();
+	}	
 	
 	@GetMapping("/deletewallets")
 	public String deleteAccounts(Model model) {

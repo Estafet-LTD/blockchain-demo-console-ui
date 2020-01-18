@@ -42,17 +42,17 @@ public class AccountController {
 		return "newaccount";
 	}
 	
+	@PostMapping("/newaccount")
+	public String newAccountSubmit(@ModelAttribute Account account) {
+		account = accountService.createAccount(account);
+		return "redirect:/account/" + account.getId();
+	}
+
 	@GetMapping("/deleteaccounts")
 	public String deleteAccounts(Model model) {
 		accountService.deleteAccounts();
 		model.addAttribute("accounts", accountService.getAccounts());
 		return "accounts";
-	}
-	
-	@PostMapping("/newaccount")
-	public String newAccountSubmit(@ModelAttribute Account account) {
-		account = accountService.createAccount(account);
-		return "redirect:/account/" + account.getId();
 	}
 	
 }

@@ -1,11 +1,11 @@
 {
 	"request": {
 		"method": "GET",
-		"url": "/console-ui/wallet-ms/wallet/kjkjjljljljljl"
+		"url": "/console-ui/wallet-ms/wallet/0x1b996c229735359188ad29c3988f0558320f8764"
 	},
 	"response": {
 		"status": 200,
-		"body": "{\"walletAddress\": \"kjkjjljljljljl\", \"walletName\": \"Dennis\", \"balance\": 240 }",
+		"body": "{\"walletAddress\": \"0x1b996c229735359188ad29c3988f0558320f8764\", \"walletName\": \"Dennis\", \"balance\": 240 }",
 		"headers": {
             "Content-Type": "application/json"
         }

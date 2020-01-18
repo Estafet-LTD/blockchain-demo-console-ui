@@ -5,7 +5,7 @@
 	},
 	"response": {
 		"status": 200,
-		"body": "{\"id\": 1, \"walletAddress\": \"fjfjfdjdjd\", \"accountName\": \"Dennis\", \"currency\": \"USD\", \"balance\": 500, \"pendingBalance\": 0, \"pending\": false, \"transactions\":[{ \"id\": 1, \"walletTransactionId\": \"wweewww\", \"amount\": 50, \"status\": \"CLEARED\", \"cleared\": true, \"pending\": false, \"description\": \"deposit\" }, { \"id\": 2, \"walletTransactionId\": \"lklkhjhjhj\", \"amount\": 450, \"status\": \"CLEARED\", \"cleared\": true, \"pending\": false, \"description\": \"deposit\" }]}",
+		"body": "{\"id\": 1, \"walletAddress\": \"0x1b996c229735359188ad29c3988f0558320f8764\", \"accountName\": \"Dennis\", \"currency\": \"USD\", \"balance\": 500, \"pendingBalance\": 0, \"pending\": false, \"transactions\":[{ \"id\": 1, \"walletTransactionId\": \"wweewww\", \"amount\": 50, \"status\": \"CLEARED\", \"cleared\": true, \"pending\": false, \"description\": \"deposit\" }, { \"id\": 2, \"walletTransactionId\": \"lklkhjhjhj\", \"amount\": 450, \"status\": \"CLEARED\", \"cleared\": true, \"pending\": false, \"description\": \"deposit\" }]}",
 		"headers": {
             "Content-Type": "application/json"
         }

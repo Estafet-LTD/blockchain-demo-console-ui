@@ -1,7 +1,7 @@
 {
 	"request": {
-		"method": "POST",
-		"url": "/console-ui/bank-ms/account"
+		"method": "GET",
+		"url": "/console-ui/bank-ms/account/1"
 	},
 	"response": {
 		"status": 200,

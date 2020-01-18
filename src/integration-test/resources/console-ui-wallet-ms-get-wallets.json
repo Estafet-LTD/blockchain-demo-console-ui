@@ -5,7 +5,7 @@
 	},
 	"response": {
 		"status": 200,
-		"body": "[{\"walletAddress\": \"kjkjjljljljljl\", \"walletName\": \"Dennis\", \"balance\": 240 },{\"walletAddress\": \"ddkdkslsls\", \"walletName\": \"Shukri\", \"balance\": 4438 }]",
+		"body": "[{\"walletAddress\": \"0x1b996c229735359188ad29c3988f0558320f8764\", \"walletName\": \"Dennis\", \"balance\": 240 },{\"walletAddress\": \"ddkdkslsls\", \"walletName\": \"Shukri\", \"balance\": 4438 }]",
 		"headers": {
             "Content-Type": "application/json"
         }

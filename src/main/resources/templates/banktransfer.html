@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<body>
+	<div layout:fragment="content">
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="/">Home</a></li>
+		    <li class="breadcrumb-item"><a href="/wallets">Wallets</a></li>
+		    <li class="breadcrumb-item"><a th:href="@{'/wallet/' + ${wallet.walletAddress}}">Wallet</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">Bank Transfer</li>
+		  </ol>
+		</nav>	
+		<form action="#" th:action="@{/banktransfer}" th:object="${banktransfer}" method="post">
+			<div class="card">
+			  <h2 class="card-header">Wallet&nbsp;<small th:text="${wallet.walletName}"></small></h2>
+			  <div class="card-body">
+			    <h3 class="card-title" th:text="Account Balance + ' ' + ${account.balance} + ' ' + ${account.currency}"/>
+			    <input type="text" class="form-control form-control-lg mb-1" placeholder="0.00" th:field="*{transferAmount}"/>
+			    <input id="accountId" th:field="*{accountId}" type="hidden"/>
+			    <input id="walletAddress" th:field="*{walletAddress}" type="hidden"/>
+			    <a href="#" class="btn btn-primary">Transfer</a>
+			  </div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

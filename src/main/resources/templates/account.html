@@ -12,19 +12,19 @@
 		  </ol>
 		</nav>	
 		<div class="row">
-			<div class="col">
+			<div class="col" align="left">
 				<h3>
 				  Account
 				  <small class="text-muted" th:text="${account.accountName} + ' ' + [ + ${account.accountNumber} + ]"></small>
 				</h3>				
 			</div>
-			<div class="col">
+			<div class="col" align="center">
 				<h3>
 				  Balance
 				  <small class="text-muted" th:text="${account.balance + ' ' + account.currency}"></small>
 				</h3>			
 			</div>
-			<div class="col">
+			<div class="col" align="right">
 				<h3>
 				  Pending Balance
 				  <small class="text-muted" th:text="${account.pendingBalance + ' ' + account.currency}"></small>
