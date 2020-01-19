@@ -29,7 +29,7 @@
 		<dependency>
 			<groupId>com.estafet.blockchain.demo</groupId>
 			<artifactId>estafet-blockchain-demo-pages-lib</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
