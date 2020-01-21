@@ -9,6 +9,10 @@ public class Wallet {
 	private int balance;
 
 	private String status;
+	
+	public String getAsterisk() {
+		return status.equals("PENDING") ? "*" :"";
+	}
 
 	public String getStatus() {
 		return status;
