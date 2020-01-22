@@ -4,11 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.estafet.blockchain.demo.pages.lib.home.HomePage;
 import com.estafet.blockchain.demo.pages.lib.wallet.WalletPage;
 
+@Ignore
 public class ITWalletPageTest {
 
 	WalletPage walletPage;

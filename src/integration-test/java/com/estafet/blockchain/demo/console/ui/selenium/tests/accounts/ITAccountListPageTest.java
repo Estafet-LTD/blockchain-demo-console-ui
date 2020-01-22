@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.estafet.blockchain.demo.pages.lib.account.AccountListPage;
@@ -44,6 +45,7 @@ public class ITAccountListPageTest {
 		assertTrue(accountListPage.getItems().get(0).clickTransactionsLink().isLoaded());		
 	}
 
+	@Ignore
 	@Test
 	public void testClickWalletLink() {
 		assertTrue(accountListPage.getItems().get(0).clickWalletLink().isLoaded());		
