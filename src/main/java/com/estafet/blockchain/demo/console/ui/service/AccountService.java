@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import com.estafet.blockchain.demo.console.ui.model.Account;
 import com.estafet.blockchain.demo.console.ui.model.Money;
 import com.estafet.blockchain.demo.console.ui.model.NewAccount;
-import com.estafet.microservices.scrum.lib.commons.rest.RestHelper;
+import com.estafet.openshift.boost.commons.lib.rest.RestHelper;
 
 @Service
 public class AccountService {

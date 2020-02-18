@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.estafet.blockchain.demo.console.ui.model.ExchangeRate;
-import com.estafet.microservices.scrum.lib.commons.rest.RestHelper;
+import com.estafet.openshift.boost.commons.lib.rest.RestHelper;
 
 @Service
 public class ExchangeRateService {

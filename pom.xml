@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.estafet.openshift.boost</groupId>
 		<artifactId>estafet-openshift-boost-springboot-ui</artifactId>
-		<version>1.0.1</version>
+		<version>1.0.5</version>
 		<relativePath />
 	</parent>
 
@@ -15,12 +15,12 @@
 		<microservice>console-ui</microservice>
 	</properties>
 
-	<dependencies>
+	<dependencies>	
 		<dependency>
-			<groupId>com.estafet.microservices.scrum</groupId>
-			<artifactId>microservices-scrum-commons-lib</artifactId>
-			<version>1.0.6</version>
-		</dependency>
+			<groupId>com.estafet.openshift.boost</groupId>
+			<artifactId>estafet-openshift-boost-commons-lib</artifactId>
+			<version>0.0.5</version>
+		</dependency>		
 		<dependency>
     		<groupId>org.apache.commons</groupId>
     		<artifactId>commons-lang3</artifactId>
@@ -29,7 +29,7 @@
 		<dependency>
 			<groupId>com.estafet.blockchain.demo</groupId>
 			<artifactId>estafet-blockchain-demo-pages-lib</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.2</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
