@@ -4,14 +4,16 @@
 	layout:decorator="default">
 <body>
 	<div layout:fragment="content">
-		<nav aria-label="breadcrumb">
-		  <ol class="breadcrumb">
-		    <li class="breadcrumb-item"><a href="/">Home</a></li>
-		    <li class="breadcrumb-item"><a href="/accounts">Accounts</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">Open Account</li>
-		  </ol>
-		</nav>			
-				<form action="#" th:action="@{/newaccount}" th:object="${newAccount}" method="post">
+		<div class="light-font">
+			<nav aria-label="breadcrumb">
+			  <ol class="breadcrumb primary-color">
+			    <li class="breadcrumb-item"><a class="white-text" href="/">Home</a></li>
+			    <li class="breadcrumb-item"><a class="white-text" href="/accounts">Accounts</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">Open Account</li>
+			  </ol>
+			</nav>			
+		</div>
+		<form action="#" th:action="@{/newaccount}" th:object="${newAccount}" method="post">
 		  <div class="row">
 			  <div class="col">
 		  		  <input type="text" class="form-control form-control-lg mb-1" placeholder="Account Name" th:field="*{accountName}"/>

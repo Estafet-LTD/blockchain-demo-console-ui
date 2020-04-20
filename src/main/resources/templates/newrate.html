@@ -4,13 +4,15 @@
 	layout:decorator="default">
 <body>
 	<div layout:fragment="content">
-		<nav aria-label="breadcrumb">
-		  <ol class="breadcrumb">
-		    <li class="breadcrumb-item"><a href="/">Home</a></li>
-		    <li class="breadcrumb-item"><a href="/rates">Rates</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">New Exchange Rate</li>
-		  </ol>
-		</nav>		
+		<div class="light-font">
+			<nav aria-label="breadcrumb">
+			  <ol class="breadcrumb primary-color">
+			    <li class="breadcrumb-item"><a class="white-text" href="/">Home</a></li>
+			    <li class="breadcrumb-item"><a class="white-text" href="/rates">Rates</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">New Exchange Rate</li>
+			  </ol>
+			</nav>		
+		</div>
 		<div class="card">
 		  <h2 class="card-header">Exchange Rate&nbsp;<small th:text="${exchangeRate.currency}"></small></h2>
 		  <div class="card-body">
