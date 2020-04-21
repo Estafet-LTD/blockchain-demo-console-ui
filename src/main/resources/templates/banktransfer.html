@@ -4,16 +4,14 @@
 	layout:decorator="default">
 <body>
 	<div layout:fragment="content">
-		<div class="light-font">
 			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb primary-color">
-			    <li class="breadcrumb-item"><a class="white-text" href="/">Home</a></li>
-			    <li class="breadcrumb-item"><a class="white-text" href="/wallets">Wallets</a></li>
-			    <li class="breadcrumb-item"><a class="white-text" th:href="@{'/wallet/' + ${wallet.walletAddress}}">Wallet</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">Bank Transfer</li>
+			  <ol class="breadcrumb bg-info">
+			    <li class="breadcrumb-item"><a class="text-light" href="/">Home</a></li>
+			    <li class="breadcrumb-item"><a class="text-light" href="/wallets">Wallets</a></li>
+			    <li class="breadcrumb-item"><a class="text-light" th:href="@{'/wallet/' + ${wallet.walletAddress}}">Wallet</a></li>
+			    <li class="breadcrumb-item text-light active" aria-current="page">Bank Transfer</li>
 			  </ol>
 			</nav>	
-		</div>
 		<div class="card">
 		  <h2 class="card-header">Wallet&nbsp;<small th:text="${wallet.walletName}"></small></h2>
 		  <div class="card-body">

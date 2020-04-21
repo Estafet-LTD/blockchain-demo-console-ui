@@ -6,11 +6,11 @@
 	<div layout:fragment="content">
 		<div class="light-font">
 			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb primary-color">
-			    <li class="breadcrumb-item"><a class="white-text" href="/">Home</a></li>
-			    <li class="breadcrumb-item"><a class="white-text" href="/wallets">Wallets</a></li>
-			    <li class="breadcrumb-item"><a class="white-text" th:href="@{'/wallet/' + ${walletAddress}}">Wallet</a></li>		    
-			    <li class="breadcrumb-item active" aria-current="page">Wallet Transfer</li>
+			  <ol class="breadcrumb bg-info">
+			    <li class="breadcrumb-item"><a class="text-light" href="/">Home</a></li>
+			    <li class="breadcrumb-item"><a class="text-light" href="/wallets">Wallets</a></li>
+			    <li class="breadcrumb-item"><a class="text-light" th:href="@{'/wallet/' + ${walletAddress}}">Wallet</a></li>		    
+			    <li class="breadcrumb-item text-light active" aria-current="page">Wallet Transfer</li>
 			  </ol>
 			</nav>		
 		</div>

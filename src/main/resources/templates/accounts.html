@@ -4,14 +4,12 @@
 	layout:decorator="default">
 <body>
 	<div layout:fragment="content">
-		<div class="light-font">
-			<nav aria-label="breadcrumb primary-color">
-			  <ol class="breadcrumb">
-			    <li class="breadcrumb-item"><a class="white-text" href="/">Home</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">Accounts</li>
-			  </ol>
-			</nav>
-		</div>
+		<nav aria-label="breadcrumb bg-info">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a class="text-light" href="/">Home</a></li>
+		    <li class="breadcrumb-item text-light active" aria-current="page">Accounts</li>
+		  </ol>
+		</nav>
 		<div class="row">
 			<div class="col">
 				<div th:each="account : ${accounts}" class="card mb-3" style="width: 50rem;" id="item">
