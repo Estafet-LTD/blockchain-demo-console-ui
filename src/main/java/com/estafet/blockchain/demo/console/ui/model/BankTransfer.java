@@ -4,7 +4,7 @@ public class BankTransfer {
 
 	private double transferAmount;
 
-	private Integer accountId;
+	private String accountId;
 
 	private String walletAddress;
 
@@ -16,11 +16,11 @@ public class BankTransfer {
 		this.transferAmount = transferAmount;
 	}
 
-	public Integer getAccountId() {
+	public String getAccountId() {
 		return accountId;
 	}
 
-	public void setAccountId(Integer accountId) {
+	public void setAccountId(String accountId) {
 		this.accountId = accountId;
 	}
 

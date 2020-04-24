@@ -15,7 +15,7 @@
 			<div class="col" align="left">
 				<h3>
 				  Account
-				  <small class="text-muted" th:text="${account.accountName} + ' ' + [ + ${account.accountNumber} + ]"></small>
+				  <small class="text-muted" th:text="${account.accountName}"></small>
 				</h3>				
 			</div>
 			<div class="col" align="center">
@@ -42,7 +42,7 @@
 		  </thead>
 		  <tbody>
 		    <tr th:each="transaction : ${account.transactions}" id="transaction">
-		      <th scope="row" th:text="${transaction.id}" id="transaction_id"/>
+		      <th scope="row" th:text="${transaction.oder}" id="order"/>
 		      <td th:text="${transaction.description}" id="description"/>
 		      <td th:text="${transaction.amount  + ' ' + account.currency}" id="amount"/>
 		      <td th:text="${transaction.status}" id="status"/>

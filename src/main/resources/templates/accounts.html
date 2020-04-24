@@ -14,7 +14,7 @@
 			<div class="col">
 				<div th:each="account : ${accounts}" class="card mb-3" style="width: 50rem;" id="item">
 				  <div class="card-body">
-				    <h4 class="card-title" th:text="${account.accountName} + ' ' + [ + ${#numbers.formatInteger(account.id, 9)} + ]"/>
+				    <h4 class="card-title" th:text="${account.accountName}"/>
 				    <h5 class="card-subtitle mb-2 text-muted" th:text="Balance + ' ' + ${account.balance + ' ' + account.currency}"/>
 				    <p class="card-text"><b>Last transaction</b>&nbsp;<span th:text="${account.transactions[0].description + ' ' + account.transactions[0].amount + ' ' + account.currency}"/></p>
 				    <a th:href="@{'/account/' + ${account.id}}" class="btn btn-primary btn-sm">Transactions</a>
