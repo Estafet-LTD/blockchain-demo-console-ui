@@ -30,7 +30,7 @@ public class AccountController {
 	}
 	
 	@RequestMapping("/account/{id}")
-	public String account(@PathVariable int id, Model model) {
+	public String account(@PathVariable String id, Model model) {
 		Account account = accountService.getAccount(id);
 		model.addAttribute("account", account);
 		return "account";
