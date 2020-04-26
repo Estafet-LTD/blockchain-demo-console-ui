@@ -20,8 +20,14 @@ public class Account {
 	private double pendingBalance;
 	
 	private boolean pending;
+
+	private String accountNumber;
 	
 	private List<Transaction> transactions = new ArrayList<Transaction>();
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
 
 	public String getAccountNumber() {
 		return StringUtils.truncate(id, 9);
