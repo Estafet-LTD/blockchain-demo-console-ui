@@ -24,7 +24,7 @@ public class Account {
 	private List<Transaction> transactions = new ArrayList<Transaction>();
 
 	public String getAccountNumber() {
-		return id;
+		return StringUtils.truncate(id, 9);
 	}
 
 	public String getId() {
