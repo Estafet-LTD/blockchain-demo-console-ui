@@ -15,7 +15,7 @@
 				<div th:each="account : ${accounts}" class="card mb-3" style="width: 50rem;" id="item">
 				  <div class="card-body">
 				    <h4 class="card-title" th:text="${account.accountName}"/>
-					<h4 class="card-title" th:text="${account.accountName} + ' ' + [ + ${account.accountNumber} + ]"/>
+					<h4 class="card-title" th:text="${account.accountName} "/>
 				    <p class="card-text"><b>Last transaction</b>&nbsp;<span th:text="${account.transactions[0].description + ' ' + account.transactions[0].amount + ' ' + account.currency}"/></p>
 				    <a th:href="@{'/account/' + ${account.id}}" class="btn btn-primary btn-sm">Transactions</a>
 				    <a th:href="@{'/wallet/' + ${account.walletAddress}}" class="btn btn-primary btn-sm">Wallet</a>
