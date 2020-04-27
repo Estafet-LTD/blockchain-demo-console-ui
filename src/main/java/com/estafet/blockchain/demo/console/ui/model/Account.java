@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Account {
 
-	private Integer id;
+	private String id;
 
 	private String walletAddress;
 
@@ -20,18 +20,19 @@ public class Account {
 	private double pendingBalance;
 	
 	private boolean pending;
-	
+
 	private List<Transaction> transactions = new ArrayList<Transaction>();
 
+
 	public String getAccountNumber() {
-		return StringUtils.leftPad(id.toString(), 9, '0');
+		return StringUtils.leftPad(id, 9, '0');
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

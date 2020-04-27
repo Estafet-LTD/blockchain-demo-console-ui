@@ -2,7 +2,7 @@ package com.estafet.blockchain.demo.console.ui.model;
 
 public class Transaction {
 
-	private Integer id;
+	private Integer order;
 
 	private String walletTransactionId;
 
@@ -16,12 +16,12 @@ public class Transaction {
 
 	private boolean pending;
 
-	public Integer getId() {
-		return id;
+	public Integer getOrder() {
+		return order;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setOrder(Integer order) {
+		this.order = order;
 	}
 
 	public String getWalletTransactionId() {
