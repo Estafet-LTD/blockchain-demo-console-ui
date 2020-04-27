@@ -32,12 +32,12 @@ public class ITAccountListPageTest {
 	
 	@Test
 	public void testSubTitle() {
-		assertEquals("Balance 500 USD", accountListPage.getItems().get(0).getSubTitle());		
+		assertEquals("Balance 500.0 USD", accountListPage.getItems().get(0).getSubTitle());
 	}
 	
 	@Test
 	public void testText() {
-		assertEquals("Last transaction deposit 50 USD", accountListPage.getItems().get(0).getText());		
+		assertEquals("Last transaction deposit 50.0 USD", accountListPage.getItems().get(0).getText());
 	}
 	
 	@Test
