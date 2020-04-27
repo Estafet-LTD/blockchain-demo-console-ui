@@ -21,17 +21,12 @@ public class Account {
 	
 	private boolean pending;
 
-//	private String accountNumber;
-	
 	private List<Transaction> transactions = new ArrayList<Transaction>();
 
-/*	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
-	}
 
 	public String getAccountNumber() {
-		return StringUtils.truncate(id, 9);
-	}*/
+		return StringUtils.leftPad(id, 9, '0');
+	}
 
 	public String getId() {
 		return id;
