@@ -42,7 +42,8 @@
 		  </thead>
 		  <tbody>
 		    <tr th:each="transaction : ${account.transactions}" id="transaction">
-		      <th scope="row" th:text="${transaction.oder}" id="order"/>
+<!--		      <th scope="row" th:text="${transaction.oder}" id="order"/>-->
+			  <th scope="row" th:text="#" id="order"/>
 		      <td th:text="${transaction.description}" id="description"/>
 		      <td th:text="${transaction.amount  + ' ' + account.currency}" id="amount"/>
 		      <td th:text="${transaction.status}" id="status"/>

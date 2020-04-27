@@ -32,6 +32,7 @@ public class AccountController {
 	@RequestMapping("/account/{id}")
 	public String account(@PathVariable String id, Model model) {
 		Account account = accountService.getAccount(id);
+		System.out.println("account "+ account);
 		System.out.println("account name= "+account.getAccountName());
 		System.out.println("account number= "+account.getAccountNumber());
 		System.out.println("account balance= "+account.getBalance());
