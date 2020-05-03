@@ -4,13 +4,6 @@ build:
   wiremock: true
   promote: true
   tests: true
-  wiremock_environment_variables:
-    - name: CURRENCY_CONVERTER_MS_SERVICE_URI
-      value: http://wiremock-docker.blockchain-demo-build.svc:8080/console-ui/currency-converter-ms
-    - name: BANK_MS_SERVICE_URI
-      value: http://wiremock-docker.blockchain-demo-build.svc:8080/console-ui/bank-ms
-    - name: WALLET_MS_SERVICE_URI
-      value: http://wiremock-docker.blockchain-demo-build.svc:8080/console-ui/wallet-ms
 release:
   db: false
 promote:

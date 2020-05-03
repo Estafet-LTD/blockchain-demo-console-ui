@@ -1,10 +1,10 @@
 config_map:
   - name: BANK_MS_SERVICE_URI
-    value: http://bank-ms.blockchain-demo-build.svc:8080
+    value: http://wiremock-docker.blockchain-demo-build.svc:8080/console-ui/bank-ms
   - name: WALLET_MS_SERVICE_URI
-    value: http://wallet-ms.blockchain-demo-build.svc:8080
+    value: http://wiremock-docker.blockchain-demo-build.svc:8080/console-ui/wallet-ms
   - name: CURRENCY_CONVERTER_MS_SERVICE_URI
-    value: http://currency-converter-ms.blockchain-demo-build.svc:8080
+    value: http://wiremock-docker.blockchain-demo-build.svc:8080/console-ui/currency-converter-ms
   - name: JAEGER_SERVICE_NAME
     value: build-console-ui
   - name: JAEGER_SAMPLER_TYPE
