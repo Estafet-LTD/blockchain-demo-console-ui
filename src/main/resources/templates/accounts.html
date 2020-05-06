@@ -19,6 +19,7 @@
 				    <p class="card-text"><b>Last transaction</b>&nbsp;<span th:text="${account.transactions[0].description + ' ' + account.transactions[0].amount + ' ' + account.currency}"/></p>
 				    <a th:href="@{'/account/' + ${account.id}}" class="btn btn-sm" th:classappend="${@environment.getProperty('theme.button.colour')}">Transactions</a>
 				    <a th:href="@{'/wallet/' + ${account.walletAddress}}" class="btn btn-sm" th:classappend="${@environment.getProperty('theme.button.colour')}">Wallet</a>
+				    <a th:href="@{'/deleteaccount/' + ${account.id}}" class="btn btn-sm" th:classappend="${@environment.getProperty('theme.button.colour')}">Delete</a>
 				  </div>
 				</div>	
 			</div>	
