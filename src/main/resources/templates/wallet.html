@@ -18,8 +18,8 @@
 		  <div class="card-body">
 		    <h3 class="card-title" th:text="'Balance of ' + ${wallet.balance} + ${wallet.asterisk} + ' ' + Estacoin"/>
 		    <p class="card-text" th:text="${wallet.walletAddress}"></p>
-		    <a th:href="@{'/banktransfer/' + ${wallet.walletAddress}}" class="btn btn-primary">Transfer Funds from Bank Account to Wallet</a>
-		    <a th:href="@{'/wallettransfer/' + ${wallet.walletAddress}}" class="btn btn-primary">Transfer Estacoin to Another Wallet</a>
+		    <a th:href="@{'/banktransfer/' + ${wallet.walletAddress}}" class="btn" th:classappend="${@environment.getProperty('theme.button.colour')}">Transfer Funds from Bank Account to Wallet</a>
+		    <a th:href="@{'/wallettransfer/' + ${wallet.walletAddress}}" class="btn" th:classappend="${@environment.getProperty('theme.button.colour')}">Transfer Estacoin to Another Wallet</a>
 		  </div>
 		</div>
 	</div>

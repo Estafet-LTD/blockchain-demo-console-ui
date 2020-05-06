@@ -17,12 +17,9 @@
 				    <h4 class="card-title" th:text="${wallet.walletName}"/>
 				    <h5 class="card-subtitle mb-2 text-muted" th:text="'Balance of ' + ${wallet.balance} + ' ' + Estacoin"/>
 				    <p class="card-text" th:text="${wallet.walletAddress}"></p>
-				    <a th:href="@{'/wallet/' + ${wallet.walletAddress}}" class="btn btn-primary btn-sm">Manage</a>
+				    <a th:href="@{'/wallet/' + ${wallet.walletAddress}}" class="btn btn-sm" th:classappend="${@environment.getProperty('theme.button.colour')}">Manage</a>
 				  </div>
 				</div>				
-			</div>
-			<div class="col" align="right">
-				<a href="/deletewallets" class="btn btn-primary" role="button">Delete Wallets</a>			
 			</div>
 		</div>				
 	</div>
