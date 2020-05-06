@@ -5,7 +5,7 @@
 <body>
 	<div layout:fragment="content">
 			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb bg-info">
+			  <ol class="breadcrumb"  th:classappend="${@environment.getProperty('theme.nav.colour')}">
 			    <li class="breadcrumb-item"><a class="text-light" href="/">Home</a></li>
 			    <li class="breadcrumb-item"><a class="text-light" href="/wallets">Wallets</a></li>
 			    <li class="breadcrumb-item"><a class="text-light" th:href="@{'/wallet/' + ${wallet.walletAddress}}">Wallet</a></li>

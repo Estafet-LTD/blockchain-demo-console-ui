@@ -6,7 +6,7 @@
 	<div layout:fragment="content">
 		<!-- content goes here -->
         <nav aria-label="breadcrumb">
-		  <ol class="breadcrumb bg-info">
+		  <ol class="breadcrumb" th:classappend="${@environment.getProperty('theme.nav.colour')}">
 		    <li class="breadcrumb-item text-light active" aria-current="page">Home</li>
 		  </ol>
 		</nav>

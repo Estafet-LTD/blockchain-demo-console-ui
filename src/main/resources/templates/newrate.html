@@ -5,7 +5,7 @@
 <body>
 	<div layout:fragment="content">
 		<nav aria-label="breadcrumb">
-		  <ol class="breadcrumb bg-info">
+		  <ol class="breadcrumb" th:classappend="${@environment.getProperty('theme.nav.colour')}">
 		    <li class="breadcrumb-item"><a class="text-light" href="/">Home</a></li>
 		    <li class="breadcrumb-item"><a class="text-light" href="/rates">Rates</a></li>
 		    <li class="breadcrumb-item text-light active" aria-current="page">New Exchange Rate</li>
