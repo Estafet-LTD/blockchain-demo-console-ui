@@ -46,4 +46,8 @@ public class AccountService {
 		return restTemplate.getForObject(bankServiceURI() + "/account/walletAddress/{address}", Account.class, address);
 	}
 
+	public void deleteAccount(String id) {
+		restTemplate.delete(bankServiceURI() + "/account/{id}", id);
+	}
+
 }
