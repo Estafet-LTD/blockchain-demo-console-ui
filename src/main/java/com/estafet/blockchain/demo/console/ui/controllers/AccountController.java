@@ -29,6 +29,13 @@ public class AccountController {
 		return "accounts";
 	}
 	
+	@RequestMapping("/deleteaccount/{id}")
+	public String deleteAccount(@PathVariable String id, Model model) {
+		accountService.deleteAccount(id);
+		model.addAttribute("accounts", accountService.getAccounts());
+		return "accounts";
+	}
+	
 	@RequestMapping("/account/{id}")
 	public String account(@PathVariable String id, Model model) {
 		Account account = accountService.getAccount(id);
