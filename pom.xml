@@ -35,8 +35,8 @@
 	</dependencies>
 	
 	<scm>
-		<connection>scm:git:https://github.com/Estafet-LTD/estafet-blockchain-demo-console-ui.git</connection>
-		<developerConnection>scm:git:https://github.com/Estafet-LTD/estafet-blockchain-demo-console-ui.git</developerConnection>
+		<connection>scm:git:https://github.com/Estafet-LTD/blockchain-demo-console-ui.git</connection>
+		<developerConnection>scm:git:https://github.com/Estafet-LTD/blockchain-demo-console-ui.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 

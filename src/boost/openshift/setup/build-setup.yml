@@ -1,4 +1,4 @@
 setup:
   - name: wiremock-upload
-    repo: estafet-blockchain-demo-console-ui
+    repo: blockchain-demo-console-ui
     json_dir: src/integration-test/resources
