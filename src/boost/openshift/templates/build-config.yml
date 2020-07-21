@@ -13,14 +13,12 @@ parameters:
   required: true
 - description: Defines name of the microservice
   name: MICROSERVICE
-  value: console-ui
   required: true
 - description: Defines the git repository uri within which the microservice resides
   name: MICROSERVICE_REPO_URI
   required: true
 - description: Git branch/tag reference
   name: SOURCE_REPOSITORY_REF
-  value: master
   required: false
 - description: Defines docker registry
   name: DOCKER_REGISTRY
