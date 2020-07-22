@@ -1,4 +1,4 @@
 setup:
   - name: wiremock-upload
-    repo: blockchain-demo-console-ui
+    repo: "{{ microservice.name }}"
     json_dir: src/integration-test/resources
