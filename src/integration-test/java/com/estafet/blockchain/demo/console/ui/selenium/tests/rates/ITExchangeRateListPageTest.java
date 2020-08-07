@@ -30,12 +30,12 @@ public class ITExchangeRateListPageTest {
 	
 	@Test
 	public void testSubTitle() {
-		assertEquals("Rate 600", exchangeRateListPage.getItems().get(2).getSubTitle());		
+		assertEquals("Rate 600.0", exchangeRateListPage.getItems().get(2).getSubTitle());		
 	}
 	
 	@Test
 	public void testText() {
-		assertEquals("1 EUR is equal to 800 EstaCoin", exchangeRateListPage.getItems().get(4).getText());		
+		assertEquals("1 EUR is equal to 800.0 EstaCoin", exchangeRateListPage.getItems().get(4).getText());		
 	}
 
 	@Test
