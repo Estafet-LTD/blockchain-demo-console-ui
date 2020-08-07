@@ -1,5 +1,6 @@
 package com.estafet.blockchain.demo.console.ui.service;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.estafet.blockchain.demo.console.ui.model.ExchangeRate;
-import com.estafet.openshift.boost.commons.lib.rest.RestHelper;
 
 @Service
 public class ExchangeRateService {
@@ -16,7 +16,7 @@ public class ExchangeRateService {
 	private RestTemplate restTemplate;
 
 	public List<ExchangeRate> getExchangeRates() {
-		return RestHelper.getRestQuery(restTemplate, exchangeRateServiceURI() + "/exchange-rates", ExchangeRate.class);
+		return Arrays.asList(restTemplate.getForObject(exchangeRateServiceURI() + "/exchange-rates", ExchangeRate[].class));
 	}
 
 	private String exchangeRateServiceURI() {

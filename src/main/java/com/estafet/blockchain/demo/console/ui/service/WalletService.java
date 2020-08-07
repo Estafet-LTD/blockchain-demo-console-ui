@@ -1,5 +1,6 @@
 package com.estafet.blockchain.demo.console.ui.service;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 import com.estafet.blockchain.demo.console.ui.model.BankTransfer;
 import com.estafet.blockchain.demo.console.ui.model.Wallet;
 import com.estafet.blockchain.demo.console.ui.model.WalletTransfer;
-import com.estafet.openshift.boost.commons.lib.rest.RestHelper;
 
 @Service
 public class WalletService {
@@ -18,7 +18,7 @@ public class WalletService {
 	private RestTemplate restTemplate;
 
 	public List<Wallet> getWallets() {
-		return RestHelper.getRestQuery(restTemplate, walletServiceURI() + "/wallets", Wallet.class);
+		return Arrays.asList(restTemplate.getForObject(walletServiceURI() + "/wallets", Wallet[].class));
 	}
 
 	private String walletServiceURI() {
